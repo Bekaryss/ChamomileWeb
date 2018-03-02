@@ -136,7 +136,7 @@ namespace СhamomileWeb.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Customer,CustomerType,RouteId,CategoryId")] Order order)
+        public async Task<IActionResult> Create([Bind("Id,CustomerName,CustomerType,RouteId,CategoryId")] Order order)
         {
             if (ModelState.IsValid)
             {
@@ -179,7 +179,7 @@ namespace СhamomileWeb.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Customer,CustomerType,RouteId,CategoryId")] Order order)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,CustomerName,CustomerType,RouteId,CategoryId")] Order order)
         {
             if (id != order.Id)
             {

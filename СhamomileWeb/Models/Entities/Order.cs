@@ -29,7 +29,7 @@ namespace СhamomileWeb.Models.Entities
         [HiddenInput(DisplayValue = false)]
         public int Id { get; set; }
         [Required]
-        public string Customer { get; set; }
+        public string CustomerName { get; set; }
         [EnumDataType(typeof(CustomerType))]
         public CustomerType CustomerType { get; set; }
         [Required]

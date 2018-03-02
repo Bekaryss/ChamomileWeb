@@ -13,7 +13,7 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Customer)
+                @Html.DisplayNameFor(model => model.CustomerName)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.CustomerType)
@@ -41,7 +41,7 @@
         {
             <tr>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Customer)
+                    @Html.DisplayFor(modelItem => item.CustomerName)
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.CustomerType)
@@ -72,7 +72,7 @@
                     else if (item.State == State.Awaiting)
                     {
 
-                        <form asp-controller="Orders" asp-action="Cancle" method="post">
+                        <form asp-controller="Orders" asp-action="Cancel" method="post">
                             <input type="hidden" name="id" value="@item.Id" />
                             <button type="submit">Cancle</button>
                         </form>
